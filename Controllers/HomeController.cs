@@ -12,6 +12,13 @@ namespace httpoverrides_test.Controllers
     {
         public IActionResult Index()
         {
+            Console.WriteLine("header: ");
+            foreach (var item in Request.Headers)
+            {
+                Console.WriteLine(item.Key + "=" + item.Value);
+            }
+            Console.WriteLine("Scheme: " + Request.Scheme);
+
             return View();
         }
 
