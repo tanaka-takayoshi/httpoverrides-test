@@ -43,12 +43,12 @@ namespace httpoverrides_test.Controllers
 
         public IActionResult Redirect()
         {
-            return Redirect("/Home");
+            return RedirectToAction("Index");
         }
 
         public IActionResult RedirectP()
         {
-            return RedirectPermanent("/Home");
+            return RedirectToActionPermanent("Index");
         }
     }
 }
