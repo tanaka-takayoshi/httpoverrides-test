@@ -30,7 +30,7 @@ namespace httpoverrides_test
         {
             app.UseForwardedHeaders(new ForwardedHeadersOptions
             {
-                ForwardedHeaders = ForwardedHeaders.XForwardedProto
+                ForwardedHeaders = ForwardedHeaders.All
             });
 
             if (env.IsDevelopment())

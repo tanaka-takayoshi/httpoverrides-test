@@ -40,5 +40,15 @@ namespace httpoverrides_test.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public IActionResult Redirect()
+        {
+            return Redirect("/Home");
+        }
+
+        public IActionResult RedirectP()
+        {
+            return RedirectPermanent("/Home");
+        }
     }
 }
